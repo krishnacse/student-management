@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "student-management-ng"
+  },
+  "targets": {
+    "student-management-ng": {
+      "hosting": {
+        "student-management": [
+          "student-management-ng"
+        ]
+      }
+    }
+  }
+}
