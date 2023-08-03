@@ -13,8 +13,8 @@ export class LoginComponent implements OnInit {
 
   constructor(private auth: AuthService) {  }
   
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
+  ngOnInit() {
+    // throw new Error('Method not implemented.');
   }
   
   login(){

@@ -2,6 +2,7 @@ import { Component,OnInit } from '@angular/core';
 import { Student } from 'src/app/model/student';
 import { AuthService } from 'src/app/shared/auth.service';
 import { DataService } from 'src/app/shared/data.service';
+import { MessagingService } from 'src/app/shared/messaging.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -24,10 +25,15 @@ export class DashboardComponent implements OnInit{
   email : string = '';
   mobile : string = '';
 
-  constructor(private auth: AuthService, private data: DataService){ }
+  message:any;
+  constructor(private messagingService: MessagingService,private auth: AuthService, private data: DataService){ }
 
   ngOnInit(): void {
     this.getAllStudents();
+    this.messagingService.requestPermission();
+    this.messagingService.receiveMessaging();
+    this.message = this.messagingService.currentMessage;
+
   }
 
 

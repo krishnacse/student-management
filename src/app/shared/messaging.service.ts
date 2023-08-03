@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { AngularFireMessaging } from '@angular/fire/compat/messaging'
 import { Token } from '@angular/compiler';
+import { getMessaging, getToken } from "firebase/messaging";
+
 
 @Injectable({
   providedIn: 'root'

@@ -11,7 +11,7 @@ export class AppComponent {
   message: any;
   constructor(private messagingService: MessagingService){}
   
-  ngOnInit(){
+  ngOnInit(){ 
     this.messagingService.requestPermission();
     this.messagingService.receiveMessaging();
     this.message = this.messagingService.currentMessage;
